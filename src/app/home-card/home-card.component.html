@@ -1,0 +1,55 @@
+<!-- In Bootstrap4 you need to declare as class as img-thumbnail -->
+<div class="thumbnail">
+    <img alt="home-images" class='himages' src="assets/images/{{ home.image }}.jpg">
+    <!-- <h4>{{home.type}}</h4>
+    <h3>{{home.price}}</h3>
+    <p>{{home.address}}</p> -->
+
+     <!-- Adding condtion statement to show the details when user clicks on Details button -->
+    <div class="caption">
+        <div *ngIf="!home.showDetails">
+            <h4>
+                <span class="label label-primary">{{ home.type }}</span>
+            </h4>
+            <h3>
+            <i class="glyphicon glyphicon-tag"></i> 
+                {{ home.price | currency:'USD':true }}
+            </h3>
+            <h4>
+            <i class="glyphicon glyphicon-home"></i> 
+                {{ home.address }}
+            </h4>
+
+            <hr>
+    
+            <button class="btn btn-sm btn-success"
+            *ngIf="!home.showDetails" (click)="home.showDetails = !home.showDetails">
+            Details
+            </button>
+        </div>
+    
+        <!-- Adding condtion statement when user clicks on close button -->
+        <div *ngIf="home.showDetails">
+            <div class="details">
+                <h4>
+                    <span class="label label-primary">
+                    Beds: {{ home.bedrooms }}
+                    </span>
+                    <span class="label label-primary">
+                    Baths: {{ home.bathrooms }}
+                    </span>
+                    <span class="label label-primary">
+                    SqFt: {{ home.area }}
+                    </span>
+                </h4>
+                <p>{{ home.description }}</p>
+                
+                <hr>
+    
+                <button class="btn btn-sm btn-danger"
+                    (click)="home.showDetails = !home.showDetails">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

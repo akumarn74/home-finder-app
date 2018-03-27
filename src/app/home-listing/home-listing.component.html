@@ -1,6 +1,8 @@
-<!-- To render the data in json format on UI s -->
+<!--Just for refrence To render the data in json format on UI s -->
 <!-- <pre>{{ homeList | json}}</pre> -->
 
-<div *ngFor= 'let home of homeList'>
-    <p>{{home.address}}</p>
+<!--Note:  In Bootstrap4 you need to write class="row" if you want grid layout at top-->
+
+<div *ngFor= "let home of homeList" id="hlist">
+    <app-home-card class="col-sm-4" [home]= 'home'></app-home-card>
 </div>
