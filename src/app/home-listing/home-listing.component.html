@@ -1,2 +1,6 @@
 <!-- To render the data in json format on UI s -->
-<pre>{{ homeList | json}}</pre>
+<!-- <pre>{{ homeList | json}}</pre> -->
+
+<div *ngFor= 'let home of homeList'>
+    <p>{{home.address}}</p>
+</div>
