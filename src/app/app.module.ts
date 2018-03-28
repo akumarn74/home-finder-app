@@ -8,21 +8,26 @@ import { AppComponent } from './app.component';
 import { HomeListingComponent } from './home-listing/home-listing.component';
 import { HomeCardComponent } from './home-card/home-card.component';
 
-import { HomeService } from './services/home.service'
+import { HomeService } from './services/home.service';
+import { UtilService } from './services/util.service';
+import { HomeFormListComponent } from './home-form-list/home-form-list.component';
+import { SortByPipe } from './pipes/sort-by.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeListingComponent,
-    HomeCardComponent
+    HomeCardComponent,
+    HomeFormListComponent,
+    SortByPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [HomeService],
+  providers: [HomeService,UtilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
