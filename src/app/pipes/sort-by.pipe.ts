@@ -10,6 +10,7 @@ export class SortByPipe implements PipeTransform {
     if (array) {
 
       let sortField = args[0]; // the field we want to sort by
+      // flag to set for Ascending and Descending on button selection
       let sortDirection = args[1];
 
       let modifier = 1;
@@ -20,6 +21,7 @@ export class SortByPipe implements PipeTransform {
 
       array.sort((a: any, b: any) => {
 
+        // Sorting condition for different attributes
         if (a[sortField] < b[sortField]) {
           return -1 * modifier;
         } else if (a[sortField] > b[sortField]) {

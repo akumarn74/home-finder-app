@@ -11,10 +11,18 @@ import { UtilService } from './../services/util.service';
 })
 export class HomeFormListComponent implements OnInit {
 
+  // To do the form reset after submittimg 
   @ViewChild('newHomeForm') newHomeForm: NgForm;
-  propertyTypes: Array<string> = ['Condo', 'Duplex', 'House'];
 
-  constructor(
+  // to display the drop down with array of strings assigned
+  propertyTypes: Array<string> = ['Condo', 'Duplex', 'House'];
+  
+  /**
+   * 
+   * @param homeService 
+   * @param utilService 
+   */
+  constructor(  // Injecting the services 
     private homeService: HomeService,
     private utilService: UtilService
   ) { } 
@@ -22,7 +30,13 @@ export class HomeFormListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onHomeSubmit(data) {
+  /**
+   * On Form submission adding additional home if the data available 
+   * @param data 
+   * 
+   * reset for the form
+   */
+  onHomeSubmit(data) { 
     this.homeService.addHome(data);
     this.newHomeForm.reset();
   }
