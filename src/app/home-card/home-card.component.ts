@@ -15,7 +15,7 @@ export class HomeCardComponent implements OnInit {
 
   ngOnInit() {
     // Use of what kind of interface we can use as an example and imported at top level
-    let bedrooms = this.home.bedrooms; 
+    // let bedrooms = this.home.bedrooms; 
     // let kitchen = this.home;
   }
 }
