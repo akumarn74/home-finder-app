@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeListingComponent } from './home-listing/home-listing.component';
 import { HomeCardComponent } from './home-card/home-card.component';
 
+import { HomeService } from './services/home.service'
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { HomeCardComponent } from './home-card/home-card.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

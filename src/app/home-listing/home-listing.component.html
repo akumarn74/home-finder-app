@@ -4,5 +4,8 @@
 <!--Note:  In Bootstrap4 you need to write class="row" if you want grid layout at top-->
 
 <div *ngFor= "let home of homeList" id="hlist">
+    <!-- declaring home-card component as a directive and added property binding
+    as home because we added it for ngFor as our local var -->
     <app-home-card class="col-sm-4" [home]= 'home'></app-home-card>
 </div>
+ 

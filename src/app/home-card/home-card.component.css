@@ -10,3 +10,7 @@
 .thumbnail {
     min-height: 420px;
 }
+
+.label {
+    display: inline-block;
+}

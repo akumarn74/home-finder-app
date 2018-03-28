@@ -1,5 +1,4 @@
- // Sample data copied from github
- export const homeList = [
+[
     {
         "id": 1,
         "type": "Condo",
@@ -66,4 +65,4 @@
         "area": 1788,
         "image":"home-6"
     }
- ]
+]
