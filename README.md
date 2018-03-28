@@ -32,3 +32,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## General Notes 
 
 * For styling used bootstrap to do that go to yur folder and install 'npm install bootstrap --save' and then in angular-cli.json add this under styles "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+* From Angular 4 html5 required attribute is not working inorder to get it work add ngNativeValidate to form Ex: <form ngNativeValidate></form>
