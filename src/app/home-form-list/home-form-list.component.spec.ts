@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeFormListComponent } from './home-form-list.component';
+import { FormsModule } from '@angular/forms';
+import { HomeService } from '../services/home.service';
+
+import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+import { UtilService } from '../services/util.service';
 
 describe('HomeFormListComponent', () => {
   let component: HomeFormListComponent;
@@ -8,7 +14,12 @@ describe('HomeFormListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeFormListComponent ]
+      declarations: [ HomeFormListComponent ],
+
+      imports:[FormsModule,
+        HttpClientModule,
+        HttpModule],
+      providers: [HomeService, UtilService]
     })
     .compileComponents();
   }));
